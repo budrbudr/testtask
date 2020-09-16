@@ -1,13 +1,13 @@
 <template>
   <div class="dialog-section">
-    <b-modal id="delete-dialog" title="Предупреждение">
-      <p class="my-2">Вы уверены, что хотите удалить запись?</p>
+    <b-modal id="delete-dialog" title="Warning">
+      <p class="my-2">Are you sure you want to delete the entry?</p>
       <template v-slot:modal-footer="{ ok, cancel }">
         <b-button type="submit" size="md" variant="success" @click="accept">
-          Да
+         Yes
         </b-button>
         <b-button size="md" variant="danger" @click="cancel()">
-          Нет
+          No
         </b-button>
       </template>
     </b-modal>

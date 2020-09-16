@@ -17,6 +17,7 @@
         <NameInputGroup :inputLabel="userInputData.phone.label"
                         :name="userInputData.phone.name"
                         :type="userInputData.phone.type"
+                        v-mask="'+##(###)-####-###'"
                         v-model="formData.phone"
                         :placeholder="userInputData.phone.placeholder"/>
         <NameInputGroup :inputLabel="userInputData.email.label"
@@ -32,7 +33,7 @@
         </b-button>
       </b-form>
     </b-modal>
-
+<!--    v-mask="'+##(###)-####-###'"-->
   </div>
 </template>
 
@@ -68,7 +69,7 @@ export default {
           label: 'Enter email',
           name: 'email',
           placeholder: 'Email',
-          type: 'text',
+          type: 'email',
         },
 
       },

@@ -12,6 +12,7 @@
     "compression-webpack-plugin": "^6.0.0",
     "core-js": "^3.6.5",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "v-mask": "^2.2.3",
     "vue": "^2.6.12",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

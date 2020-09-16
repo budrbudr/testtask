@@ -9,7 +9,6 @@ export default {
             })
                 .then(resp => resp.json())
                 .then(json => {
-                    console.log(json);
                     ctx.commit('setUsersList', json)
                 })
                 .catch(err => console.warn(err))
@@ -27,8 +26,14 @@ export default {
             state.users[index] = Object.assign(state.users[index], data)
         },
         addUser (state, data) {
-            const usersList = state.users.push(data)
-            state.users = usersList
+            let usersList = state.users.push({
+                id: data.id,
+                name: data.name,
+                phone: data.phone,
+                username: data.username,
+                email: data.email,
+            })
+            usersList = state.users
 
         },
         deleteUser (state, data) {

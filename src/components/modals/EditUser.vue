@@ -19,13 +19,13 @@
                         :name="userInputData.phone.name"
                         :type="userInputData.phone.type"
                         v-model="formData.phone"
+                        v-mask="'+##(###)-####-###'"
                         :placeholder="userInputData.phone.placeholder"/>
         <NameInputGroup :inputLabel="userInputData.email.label"
                         :name="userInputData.email.name"
                         :type="userInputData.email.type"
                         v-model="formData.email"
                         :placeholder="userInputData.email.placeholder"/>
-
         <b-button
             class="add-contact-button"
             type="submit"
@@ -72,7 +72,7 @@ export default {
           label: 'Enter email',
           name: 'email',
           placeholder: 'Email',
-          type: 'text',
+          type: 'email',
         },
       },
       formData: {

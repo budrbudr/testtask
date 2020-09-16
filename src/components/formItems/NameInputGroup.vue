@@ -3,10 +3,10 @@
             :label="inputLabel"
     >
         <b-form-input
-                required
+                :required="true"
                 :placeholder="placeholder" :name="name" :type="type" :autocomplete="autocomplete"
                 v-model="inputValue" @input="$emit('input', inputValue)">
-        ></b-form-input>
+        </b-form-input>
     </b-form-group>
 </template>
 
@@ -42,6 +42,7 @@
                 default: "",
                 type: String
             },
+
         },
         data() {
             return {
